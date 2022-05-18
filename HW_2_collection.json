@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "700ccfd0-2fc0-4689-b419-41fc70eebc0a",
+		"name": "HW_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Black_menthor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}?name={{name}}&age={{age}}&salary={{salary}}&weight={{weight}}",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{name}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary}}"
+						},
+						{
+							"key": "weight",
+							"value": "{{weight}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
