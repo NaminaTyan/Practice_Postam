@@ -49,55 +49,45 @@ pm.test("Body matches string", function () {
 --- Проверить в Test Results результат PASS
 
 3. Спарсить response body в json.
---- 
-let jsonData = pm.response.json()
+--- let jsonData = pm.response.json()
 
 4. Проверить, что name в ответе равно name s request (name вбить руками.)
----
-pm.test("user_name", function () {
+--- pm.test("user_name", function () {
     pm.expect(jsonData.name).to.eql("Diana");
 });
 
 5. Проверить, что age в ответе равно age s request (age вбить руками.)
----
-pm.test("user_age", function () {
+--- pm.test("user_age", function () {
     pm.expect(jsonData.age).to.eql("29");
 });
 
 6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
----
-pm.test("user_salary", function () {
+--- pm.test("user_salary", function () {
     pm.expect(jsonData.salary).to.eql(1000);
 });
 
 7. Спарсить request.
---- 
-let req = request.data
+--- let req = request.data
 
 8. Проверить, что name в ответе равно name s request (name забрать из request.)
---- 
-pm.test("req_name", function () {
+--- pm.test("req_name", function () {
     pm.expect(req.name).to.deep.eql(jsonData.name);
 });
 
 9. Проверить, что age в ответе равно age s request (age забрать из request.)
---- 
-pm.test("req_age", function () {
+--- pm.test("req_age", function () {
     pm.expect(req.age).to.deep.eql(jsonData.age);
 });
 
 10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
----
-pm.test("req_salary", function () {
+--- m.test("req_salary", function () {
     pm.expect(+req.salary).to.deep.eql(jsonData.salary);
 });
 
 11. Вывести в консоль параметр family из response.
---- 
-console.log(jsonData.family)
+--- console.log(jsonData.family)
 
 12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
----
-pm.test("u_salary_1_5_year", function () {
+--- m.test("u_salary_1_5_year", function () {
     pm.expect((+req.salary) * 4).to.deep.eql(jsonData.family.u_salary_1_5_year);
 });
