@@ -60,7 +60,6 @@ pm.test("Body matches string", function () {
 
 3. Спарсить response body в json.
 
-
 let jsonData = pm.response.json()
 
 4. Проверить, что name в ответе равно name s request (name вбить руками.)
@@ -411,65 +410,65 @@ pm.test("person", function () {
 
 14. Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request.)
 
-pm.test("start_qa_salary = salary", function () {
+pm.test("start_qa_salary == salary", function () {
 
-    pm.expect(jsonData.start_qa_salary)==(req.salary);
+    pm.expect(jsonData.start_qa_salary).to.eql(+req.salary);
     
 });
 
 15. Проверить, что параметр qa_salary_after_6_months равен salary*2 из request (salary забрать из request.)
 
-pm.test("qa_salary_after_6_months = salary * 2", function () {
+pm.test("qa_salary_after_6_months == salary * 2", function () {
 
-    pm.expect(jsonData.qa_salary_after_6_months)==(req.salary * 2);
+    pm.expect(jsonData.qa_salary_after_6_months).to.eql(req.salary * 2);
     
 });
 
 16. Проверить, что параметр qa_salary_after_12_months равен salary*2.7 из request (salary забрать из request.)
 
-pm.test("qa_salary_after_12_months = salary * 2.7", function () {
+pm.test("qa_salary_after_12_months == salary * 2.7", function () {
 
-    pm.expect(jsonData.qa_salary_after_12_months)==(req.salary * 2.7);
+    pm.expect(jsonData.qa_salary_after_12_months).to.eql(req.salary * 2.7);
     
 });
 
 17. Проверить, что параметр qa_salary_after_1.5_year равен salary*3.3 из request (salary забрать из request.)
 
-pm.test("qa_salary_after_1.5_year = salary * 3.3", function () {
+pm.test("qa_salary_after_1.5_year == salary * 3.3", function () {
 
-    pm.expect(jsonData["qa_salary_after_1.5_year"])==(req.salary * 3.3);
+    pm.expect(jsonData["qa_salary_after_1.5_year"]).to.eql(req.salary * 3.3);
     
 });
 
 18. Проверить, что параметр qa_salary_after_3.5_years равен salary*3.8 из request (salary забрать из request.)
 
-pm.test("qa_salary_after_3.5_years = salary * 3.8", function () {
+pm.test("qa_salary_after_3.5_years == salary * 3.8", function () {
 
-    pm.expect(jsonData["qa_salary_after_3.5_years"])==(req.salary * 3.8);
+    pm.expect(jsonData["qa_salary_after_3.5_years"]).to.eql(req.salary * 3.8);
     
 });
 
 19. Проверить, что в параметре person, 1-й элемент из u_name равен salary из request (salary забрать из request.)
 
-pm.test("u_name[1] = salary", function () {
+pm.test("u_name[1] == salary", function () {
 
-    pm.expect(jsonData.person.u_name[1])==(req.salary);
+    pm.expect(jsonData.person.u_name[1]).to.eql(+req.salary);
     
 });
 
 20. Проверить, что что параметр u_age равен age из request (age забрать из request.)
 
-pm.test("u_age = age", function () {
+pm.test("u_age == age", function () {
 
-    pm.expect(jsonData.person.u_age)==(req.age);
+    pm.expect(jsonData.person.u_age).to.eql(+req.age);
     
 });
 
 21. Проверить, что параметр u_salary_5_years равен salary*4.2 из request (salary забрать из request.)
 
-pm.test("u_salary_5_years = salary * 4.2", function () {
+pm.test("u_salary_5_years == salary * 4.2", function () {
 
-    pm.expect(jsonData.person["qa_salary_after_3.5_years"])==(req.salary * 4.2);
+    pm.expect(jsonData.person["u_salary_5_years"]).to.eql(req.salary * 4.2);
     
 });
 
