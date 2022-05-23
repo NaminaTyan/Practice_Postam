@@ -8,10 +8,12 @@ http://162.55.220.72:5005/first
 --- Вставить в строку url http://162.55.220.72:5005/first
 
 1. Отправить запрос.
+
 --- Save
 --- Sand
 
 2. Статус код 200
+
 --- Переключиться на Tests
 --- Выбрать в сниппетах Status code: Code is 200
 pm.test("Status code is 200", function () {
