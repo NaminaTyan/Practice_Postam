@@ -36,6 +36,7 @@ pm.test("Body matches string", function () {
 * Save
 * Sand
 * Проверить в Test Results результат PASS
+---
 
 ### http://162.55.220.72:5005/user_info_3
 
@@ -122,6 +123,7 @@ pm.test("u_salary_1_5_year", function () {
     pm.expect(jsonData.family.u_salary_1_5_year).to.eql((+req.salary) * 4);
 });
 ``` 
+---
 
 ### http://162.55.220.72:5005/object_info_3
 
@@ -193,6 +195,7 @@ pm.test("age_4", function () {
     pm.expect(String(jsonData.family.pets.dog.age)).to.include('4');
 });
 ```
+---
 
 ### http://162.55.220.72:5005/object_info_4
 
@@ -302,6 +305,7 @@ for (let el in jsonData.salary) {
 ```
 console.log(Object.values(jsonData.salary))
 ```
+---
 
 ### http://162.55.220.72:5005/user_info_2
 
