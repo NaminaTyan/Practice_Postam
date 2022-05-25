@@ -26,7 +26,7 @@ pm.test("Status code is 200", function () {
 * Sand
 * Проверить в Test Results результат PASS
 
-#### Проверить, что в body приходит правильный string.
+#### 3. Проверить, что в body приходит правильный string.
 * Выбрать в сниппетах Responce body: Contains string
 ```
 pm.test("Body matches string", function () {
