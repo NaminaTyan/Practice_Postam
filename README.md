@@ -42,7 +42,7 @@ pm.test("Body matches string", function () {
 #### 1. Отправить запрос.
 
 * Создать запрос с методом POST
-* Вставить в строку url http://162.55.220.72:5005/first
+* Вставить в строку url http://162.55.220.72:5005/user_info_3
 * добавить в body - form-data: name, age, salary
 * Save
 * Sand
