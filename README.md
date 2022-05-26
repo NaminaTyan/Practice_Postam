@@ -12,7 +12,7 @@ HW_2 Postman
 #### 1. Отправить запрос.
 
 * Save
-* Sand
+* Send
 
 #### 2. Статус код 200
 * Переключиться на Tests
@@ -23,7 +23,7 @@ pm.test("Status code is 200", function () {
 });
 ```
 * Save
-* Sand
+* Send
 * Проверить в Test Results результат PASS
 
 #### 3. Проверить, что в body приходит правильный string.
@@ -34,7 +34,7 @@ pm.test("Body matches string", function () {
 });
 ```
 * Save
-* Sand
+* Send
 * Проверить в Test Results результат PASS
 ---
 
@@ -46,7 +46,7 @@ pm.test("Body matches string", function () {
 * Вставить в строку url http://162.55.220.72:5005/user_info_3
 * добавить в body - form-data: name, age, salary
 * Save
-* Sand
+* Send
 
 #### 2. Статус код 200
 
@@ -57,7 +57,7 @@ pm.test("Body matches string", function () {
 });
 ```
 * Save
-* Sand
+* Send
 * Проверить в Test Results результат PASS
 
 #### 3. Спарсить response body в json.
@@ -65,21 +65,21 @@ pm.test("Body matches string", function () {
 let jsonData = pm.response.json()
 ```
 
-#### 4. Проверить, что name в ответе равно name s request (name вбить руками.)
+#### 4. Проверить, что name в ответе равно name из request (name вбить руками.)
 ```
 pm.test("user_name", function () {
     pm.expect(jsonData.name).to.eql("Diana");
 });
 ```
 
-#### 5. Проверить, что age в ответе равно age s request (age вбить руками.)
+#### 5. Проверить, что age в ответе равно age из request (age вбить руками.)
 ```
 pm.test("user_age", function () {
     pm.expect(jsonData.age).to.eql("29");
 });
 ```
 
-#### 6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
+#### 6. Проверить, что salary в ответе равно salary из request (salary вбить руками.)
 ```
 pm.test("user_salary", function () {
     pm.expect(jsonData.salary).to.eql(1000);
@@ -91,21 +91,21 @@ pm.test("user_salary", function () {
 let req = request.data
 ```
 
-#### 8. Проверить, что name в ответе равно name s request (name забрать из request.)
+#### 8. Проверить, что name в ответе равно name из request (name забрать из request.)
 ``` 
 pm.test("req_name", function () {
     pm.expect(jsonData.name).to.eql(req.name);
 });
 ```
 
-#### 9. Проверить, что age в ответе равно age s request (age забрать из request.)
+#### 9. Проверить, что age в ответе равно age из request (age забрать из request.)
 ``` 
 pm.test("req_age", function () {
     pm.expect(jsonData.age).to.eql(req.age);
 });
 ``` 
 
-#### 10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+#### 10. Проверить, что salary в ответе равно salary из request (salary забрать из request.)
 ```
 pm.test("req_salary", function () {
     pm.expect(jsonData.salary).to.eql(+req.salary);
@@ -133,7 +133,7 @@ pm.test("u_salary_1_5_year", function () {
 * Вставить в строку url http://162.55.220.72:5005/object_info_3
 * добавить в body - form-data: name, age, salary
 * Save
-* Sand
+* Send
 
 #### 2. Статус код 200
 ``` 
@@ -149,19 +149,19 @@ let jsonData = pm.response.json();
 ```
 let req = pm.request.url.query.toObject()
 ```
-#### 5. Проверить, что name в ответе равно name s request (name забрать из request.)
+#### 5. Проверить, что name в ответе равно name из request (name забрать из request.)
 ``` 
 pm.test("req_name", function () {
     pm.expect(jsonData.name).to.eql(req.name);
 });
 ```
-#### 6. Проверить, что age в ответе равно age s request (age забрать из request.)
+#### 6. Проверить, что age в ответе равно age из request (age забрать из request.)
 ```
 pm.test("req_age", function () {
     pm.expect(jsonData.age).to.eql(req.age);
 });
 ```
-#### 7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+#### 7. Проверить, что salary в ответе равно salary из request (salary забрать из request.)
 ```
 pm.test("req_salary", function () {
     pm.expect(jsonData.salary).to.eql(+req.salary);
@@ -204,7 +204,7 @@ pm.test("age_4", function () {
 * http://162.55.220.72:5005/object_info_4
 * добавить в body - form-data: name, age, salary
 * Save
-* Sand
+* Send
 
 #### 2. Статус код 200
 ```
@@ -220,7 +220,7 @@ let jsonData = pm.response.json();
 ```
 let req = pm.request.url.query.toObject()
 ```
-#### 5. Проверить, что name в ответе равно name s request (name забрать из request.)
+#### 5. Проверить, что name в ответе равно name из request (name забрать из request.)
 ``` 
 pm.test("req_name", function () {
     pm.expect(jsonData.name).to.eql(req.name);
