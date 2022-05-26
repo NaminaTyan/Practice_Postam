@@ -2,14 +2,13 @@
 
 Postman
 HW_1
-=====================
 
 ### Создать запросы в Postman.
 
 * Protocol: http
 * IP: 162.55.220.72
 * Port: 5005
-=====================
+***
 
 #### EP_1
 ##### Method: GET
@@ -121,7 +120,7 @@ HW_1
           'age': int(age),
           'salary': [salary, str(salary * 2), str(salary * 3)]}
 ```
-===
+-----------------------------------
 
 #### EP_7
 ##### Method: POST
